@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>learning java </title>
+  <link rel="stylesheet" href="css.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+
+<body>
+  <div class="light"><button id="light-change" onclick="darkmode()">Dark-Mode</button></div>
+  <div class="money">
+    <span id="pointer" style="background-color: aliceblue; color:rgb(0, 255, 13); ">0</span>
+    <span id="dorlar" style="margin-left: 5px;">$</span>
+  </div>
+  <div class="buy">
+    <div class="position">
+      <!--buger-->
+      <div><img src="OIP.jpg" alt="cart"
+          style="width: 298px; height: 200px; border: 0px solid red;border-radius: 10px 10px 2px 1px"></div>
+      <div style="border:0px solid; font-family:'Times New Roman', Times, serif;
+                      color: rgb(35, 72, 255); -webkit-text-stroke:0.9px rgb(144, 125, 0); font-size: 25px">
+        <h2>Big Burger Size </h2>
+      </div>
+      <div class="buy-details">
+        <button onclick="buyBurger()">Buy</button>
+        <input type="number" id="quantity" value="1" min="0" max="100" oninput="updatePrice()" nonce="text">
+        <span id="price" style="color: rgb(255, 0, 0); ;font-weight:bold">$10</span>
+      </div>
+    </div>
+    <!--lambo -->
+    <div class="position">
+      <div><img src="lamborgihini.jpg" alt="cart"
+          style="width: 298px; height: 200px; border: 0px solid red;border-radius: 10px 10px 2px 1px"></div>
+      <div style="border:0px solid; font-family:'Times New Roman', Times, serif;
+                      color: rgb(35, 72, 255); -webkit-text-stroke:0.9px rgb(144, 125, 0); font-size: 25px">
+        <h2>Lamborghini </h2>
+      </div>
+      <div class="buy-details">
+        <button onclick="buylambo()">Buy</button>
+        <input type="number" id="quantitylambo" value="1" min="0" max="50" oninput="updatePricelambo()" nonce="text">
+        <span id="pricelambo" style="color: rgb(255, 0, 0); ;font-weight:bold">$100000</span>
+      </div>
+    </div>
+  </div>
+  <div class="list-product-bought">
+    <button id="click-showpup" onclick="showpupup()"><i class="material-icons">shopping_cart</i></button>
+    <div id="pup-up-content">
+      <h2 style="text-align: center; color:rgb(0, 0, 0); font-family:'Times New Roman', Times, serif">Product bought
+      </h2><span id="close" onclick="hidepupup()">X</span>
+      <span id="bothproduct" style="margin-left: 5px;"><strong
+          style="margin-right: 2px;font-weight: blod;">0</strong></span>
+      <hr class="hrtag">
+      <div class="layout-list">
+        <div id="lamboginih" style="border: 0px solid red; width:70px">
+          <span id="thelambonb" style="margin-left:40% ;font-size: 20px ; "><strong>0</strong></span><br>
+          <img src="lamborgihini.jpg" alt="imgproduct" width="70px" height="65px" style="border-radius: 5px;">
+        </div>
+        <div id="lamboginih" style="border: 0px solid red; width:70px">
+          <span id="theburgernb" style="margin-left:40% ;font-size: 20px"><strong>0</strong></span><br>
+          <img src="OIP.jpg" alt="imgproduct" width="70px" height="65px" style="border-radius: 5px;">
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <script src="javaScript.js"></script>
+</body>
+
+</html>
